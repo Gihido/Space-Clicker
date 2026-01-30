@@ -1,0 +1,118 @@
+/* Мобильная секция информации */
+@media (max-width: 768px) {
+    /* Показываем кнопку информации только на мобильных устройствах */
+    .mobile-info-btn {
+        display: flex !important;
+    }
+    
+    /* Добавляем новую навигационную кнопку "Информация" для мобильных устройств */
+    .nav-panel {
+        position: relative;
+    }
+    
+    /* Секция информации для мобильных устройств */
+    #info-section {
+        display: none;
+        animation: fadeIn 0.4s ease;
+        background: rgba(26, 31, 56, 0.95);
+        border-radius: 20px;
+        padding: 25px;
+        border: 2px solid rgba(0, 212, 255, 0.4);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+    }
+    
+    #info-section.active {
+        display: block;
+    }
+    
+    /* Информация о планете для мобильных */
+    .mobile-planet-info {
+        text-align: center;
+        margin-bottom: 25px;
+        padding: 15px;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 212, 255, 0.1));
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    
+    .mobile-planet-name {
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 700;
+        color: var(--energy-yellow);
+        font-size: 1.4em;
+        text-shadow: 0 0 10px currentColor;
+        margin-bottom: 10px;
+    }
+    
+    .mobile-planet-boost {
+        color: var(--neon-blue);
+        font-size: 1.1em;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 8px 15px;
+        border-radius: 10px;
+        display: inline-block;
+        margin-top: 5px;
+    }
+    
+    /* Скрыть информацию о планете, которая была под планетой на десктопе */
+    .planet-info {
+        display: none;
+    }
+    
+    /* Корректировка дерева улучшений для мобильных - теперь оно будет правильно отображаться сразу */
+    #upgrades-section {
+        scroll-margin-top: 0;
+    }
+    
+    .tree-container {
+        /* Убедимся, что дерево улучшений отображается корректно с самого начала */
+        margin-top: 0;
+        padding-top: 0;
+    }
+    
+    /* Стили для информации об игроке */
+    .mobile-player-stats {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .mobile-stat-card {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(157, 78, 221, 0.1));
+        border-radius: 12px;
+        padding: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
+    }
+    
+    .mobile-stat-title {
+        color: var(--text-dim);
+        font-size: 0.9em;
+        margin-bottom: 5px;
+    }
+    
+    .mobile-stat-value {
+        font-family: 'Orbitron', monospace;
+        font-size: 1.3em;
+        color: var(--text-light);
+        font-weight: 700;
+    }
+}
+
+/* Для десктопа скрываем кнопку информации и оставляем всё как есть */
+@media (min-width: 769px) {
+    .mobile-info-btn {
+        display: none !important;
+    }
+    
+    .mobile-planet-info,
+    .mobile-player-stats {
+        display: none !important;
+    }
+    
+    .planet-info {
+        display: block;
+    }
+}

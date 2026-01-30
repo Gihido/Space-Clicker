@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="mobile_specific.css">
     <link rel="stylesheet" href="mobile_fixes.css">
     <link rel="stylesheet" href="small_screen_fixes.css">
+    <link rel="stylesheet" href="mobile_info_section.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -44,6 +45,11 @@
             <button class="nav-btn" data-section="prestige">
                 <i class="fas fa-star"></i>
                 <span>Престиж</span>
+            </button>
+            <!-- Кнопка информации (только для мобильных) -->
+            <button class="nav-btn mobile-info-btn" data-section="info">
+                <i class="fas fa-info-circle"></i>
+                <span>Информация</span>
             </button>
             <!-- Кнопка профиля будет добавлена через JS -->
         </nav>
@@ -245,6 +251,45 @@
                         <div class="bonuses-list" id="prestige-bonuses">
                             <!-- Будут заполнены JavaScript -->
                         </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Секция информации (только для мобильных) -->
+            <section class="content-section" id="info-section">
+                <h2><i class="fas fa-info-circle"></i> Информация</h2>
+                <div class="mobile-planet-info">
+                    <div class="mobile-planet-name" id="mobile-planet-name">Загрузка...</div>
+                    <div class="mobile-planet-boost" id="mobile-planet-boost">Загрузка...</div>
+                </div>
+                
+                <div class="mobile-player-stats">
+                    <div class="mobile-stat-card">
+                        <div class="mobile-stat-title">Кредиты</div>
+                        <div class="mobile-stat-value" id="mobile-credits-value">0</div>
+                    </div>
+                    <div class="mobile-stat-card">
+                        <div class="mobile-stat-title">Минералы</div>
+                        <div class="mobile-stat-value" id="mobile-minerals-value">0</div>
+                    </div>
+                    <div class="mobile-stat-card">
+                        <div class="mobile-stat-title">Энергия</div>
+                        <div class="mobile-stat-value" id="mobile-energy-value">0/0</div>
+                    </div>
+                    <div class="mobile-stat-card">
+                        <div class="mobile-stat-title">Престиж</div>
+                        <div class="mobile-stat-value" id="mobile-prestige-value">0</div>
+                    </div>
+                </div>
+                
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <div class="stat-label">Автоматически в секунду:</div>
+                        <div class="stat-value" id="mobile-auto-income-value">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Максимальная энергия:</div>
+                        <div class="stat-value" id="mobile-max-energy-value">0</div>
                     </div>
                 </div>
             </section>
